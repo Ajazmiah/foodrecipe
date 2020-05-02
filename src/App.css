@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+.eachRecipe{
+  flex: 0 0 32.33%;
+}
+.ingridient-list{
+  background: #5E35B1;
+color: #fff;
+padding: 2rem;
+border-radius: 7px;
+}
+.moreBtn{
+  -webkit-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: #fff;
+    width: 70%;
+    background: #512DA8;
+    height: 3rem;
+    line-height: 3rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 0px black;
+    margin-top: 1rem;
+}
+.calories{
+  margin: 0;
+font-size: .9rem;
+font-family: cursive;
+}
