@@ -4,7 +4,6 @@ import Recipe from './Recipe'
 ///   https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free
 const id = '3b511dba';
 const key = '152a9f0fe331d6bdd9b8e36f51152eb4'
-const noResult = "";
 
 class FormContainer extends Component{
     constructor() {
@@ -13,13 +12,12 @@ class FormContainer extends Component{
         searchedItem: '',
         recipedData: [],
         formSubmit: false
+
+
       };
     }
 ///////////////////////////////////////////
 ////
-
-
-
 handleChange = (event)=>{
   this.setState({
    searchedItem: event.target.value
@@ -32,40 +30,28 @@ handleSubmit =(event)=>{
     formSubmit: true
   })
 }
-
-
-
-
-
-
-
 async componentDidUpdate(){
-
   if(this.state.formSubmit){
-  try{
-    const results = await fetch(`https://api.edamam.com/search?q=${this.state.searchedItem}&app_id=${id}&app_key=${key}`);
-    const data =  await results.json()
-    const recipe = data.hits;
+    try{
+      const results = await fetch(`https://api.edamam.com/search?q=${this.state.searchedItem}&app_id=${id}&app_key=${key}`);
+      const data =  await results.json()
+      const recipe = data.hits;
+
       this.setState({
         recipedData: recipe
+        // loading: "loading.."
     })
-
     this.setState({
       formSubmit: false
     })
   }
     catch(error){
-      noResult = <h1> Sorry no results...</h1>
+      console.log(error)
+    }
   }
 }
-////////
-///componentDidUpdate ENDS
-}
+
 render(){
-
-  
-
-
     const searchBtn = {
       flex: '0 0 10%',
       borderRadius: '10px',
@@ -117,7 +103,7 @@ return(
           )
         }
       </div>
-    <h1>{noResult}</h1>
+    <h1>{}</h1>
     </div>
     )
   }

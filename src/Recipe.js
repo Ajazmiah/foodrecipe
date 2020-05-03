@@ -10,7 +10,7 @@ const headerStyle= {
     fontSize: '1.2rem',
     fontFamily: 'initial'
 }
-const imgBorder = {border: '5px solid #d843155c'}
+const imgBorder = {border: '4px solid #d843155c', borderRadius: '50%' , width:'60%'}
 const list = props.ingridient.map(li=> <li style={styleLi}>{li}</li>);
 
   return(
