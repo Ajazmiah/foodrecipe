@@ -1,4 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+T
+
+
+
+
+RECIPE APP WITH REACT JS USING EDAMAM API 
+-ALLOWS USERS TO SEARCH FOOD ITEMS AND THE APP DISPLAYS DIFFERENT RECIPES WHICH CAN BE MADE WITH THE SEARCHED ITEM!
+----------------------------------------------------------------------------------------------------
+his project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
